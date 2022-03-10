@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { Form as Unform } from '@unform/web';
+import { FoodInterface } from '../../types';
 
-export const Form = styled(Unform)`
+interface IFormRef {
+  ref: any;
+  onSubmit: (data: FoodInterface) => void;
+}
+
+export const Form = styled(Unform)<IFormRef>`
   padding: 48px 40px;
   display: flex;
   flex-direction: column;
